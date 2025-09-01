@@ -12,6 +12,9 @@
         @keyframes blink {
             50% { opacity: 0; }
         }
+        .highlight {
+            filter: brightness(1.2) contrast(1.1);
+        }
     </style>
 </head>
 <body class="bg-black flex flex-col items-center justify-between min-h-screen">
@@ -20,16 +23,16 @@
         <img src="logo.png.png" alt="Zypher Logo" class="w-[322px] h-[129px] sm:w-[197px] sm:h-[79px]">
     </header>
 
-    <!-- Main Content with T-shirt GIF -->
+    <!-- Main Content with Highlighted T-shirt GIF -->
     <main class="flex-grow flex items-center justify-center">
-        <div class="w-[615px] h-[615px] sm:w-[309px] sm:h-[309px] overflow-hidden">
-            <img src="tshirt.gif" alt="T-shirt GIF" class="w-full h-full object-cover">
+        <div class="w-[700px] h-[700px] sm:w-[400px] sm:h-[400px] overflow-hidden">
+            <img src="tshirt.gif" alt="T-shirt GIF" class="w-full h-full object-cover highlight">
         </div>
     </main>
 
     <!-- Footer with Blinking Text -->
     <footer class="py-8 text-white text-center">
-        <p class="text-10px blink font-light">COMING SOON...</p>
+        <p class="text-14px blink font-light">COMING SOON...</p>
         <p class="text-20px mt-4 font-bold">ZYPHER© 2025</p>
     </footer>
 </body>
