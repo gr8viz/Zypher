@@ -3,110 +3,80 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ZYPHER | Coming Soon</title>
+  <title>Zypher</title>
   <style>
     body {
       margin: 0;
-      padding: 0;
-      background-color: black;
-      color: white;
-      font-family: 'Courier New', monospace;
+      height: 100vh;
       display: flex;
       flex-direction: column;
-      justify-content: center;
+      justify-content: space-between;
       align-items: center;
-      height: 100vh;
-      text-align: center;
-    }
-
-    .logo {
-      position: absolute;
-      top: 20px;
-      left: 20px;
-    }
-
-    .time {
-      position: absolute;
-      top: 20px;
-      right: 20px;
-      font-size: 14px;
+      background-color: black;
       color: white;
+      font-family: Arial, sans-serif;
+      overflow: hidden;
     }
 
-    .coming-soon {
-      font-size: 20px;
-      margin-bottom: 20px;
-    }
-
-    .product {
-      max-width: 400px;
-      margin-bottom: 20px;
-    }
-
-    .email-form {
-      display: flex;
-      justify-content: center;
-      gap: 10px;
+    /* Logo */
+    .logo {
       margin-top: 20px;
     }
 
-    .email-form input {
-      padding: 10px;
-      border: 1px solid white;
-      background: black;
-      color: white;
-      font-family: inherit;
-      width: 200px;
+    /* Center GIF */
+    .gif-container {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .gif-container img {
+      max-width: 80%;
+      max-height: 70%;
     }
 
-    .email-form button {
-      padding: 10px 20px;
-      border: 1px solid white;
-      background: black;
-      color: white;
-      cursor: pointer;
-      font-family: inherit;
-    }
-
-    .email-form button:hover {
-      background: white;
-      color: black;
-    }
-
-    footer {
+    /* Email Form Bottom Left */
+    .email-container {
       position: absolute;
-      bottom: 10px;
-      right: 20px;
-      font-size: 12px;
-      color: grey;
+      bottom: 20px;
+      left: 20px;
+    }
+    input[type="email"] {
+      padding: 8px;
+      border-radius: 4px;
+      border: none;
+      margin-right: 5px;
+    }
+    button {
+      padding: 8px 12px;
+      border: none;
+      border-radius: 4px;
+      background-color: white;
+      color: black;
+      cursor: pointer;
+      font-weight: bold;
     }
   </style>
 </head>
 <body>
+
+  <!-- Logo -->
   <div class="logo">
-    <img src="your-logo.png" alt="ZYPHER Logo" width="120">
+    <img src="logo.png.png" alt="Logo" width="120">
   </div>
 
-  <div class="time" id="time"></div>
+  <!-- GIF -->
+  <div class="gif-container">
+    <img src="tshirt.gif" alt="Tshirt Animation">
+  </div>
 
-  <div class="coming-soon">COMING SOON...</div>
-  <img src="your-shirt.png" alt="ZYPHER Shirt" class="product">
+  <!-- Email Signup -->
+  <div class="email-container">
+    <form>
+      <input type="email" placeholder="Enter your email" required>
+      <button type="submit">Submit</button>
+    </form>
+  </div>
 
-  <form class="email-form" action="https://formspree.io/f/yourFormID" method="POST">
-    <input type="email" name="email" placeholder="Your Email" required>
-    <button type="submit">SUBMIT</button>
-  </form>
-
-  <footer>ZYPHER © 2025</footer>
-
-  <script>
-    function updateTime() {
-      const now = new Date();
-      const options = { weekday: 'long', hour: '2-digit', minute: '2-digit' };
-      document.getElementById('time').textContent = now.toLocaleString('en-US', options);
-    }
-    setInterval(updateTime, 1000);
-    updateTime();
-  </script>
 </body>
 </html>
