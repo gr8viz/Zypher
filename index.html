@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ZYPHER | Coming Soon</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: black;
+      color: white;
+      font-family: 'Courier New', monospace;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      text-align: center;
+    }
+
+    .logo {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+    }
+
+    .time {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      font-size: 14px;
+      color: white;
+    }
+
+    .coming-soon {
+      font-size: 20px;
+      margin-bottom: 20px;
+    }
+
+    .product {
+      max-width: 400px;
+      margin-bottom: 20px;
+    }
+
+    .email-form {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 20px;
+    }
+
+    .email-form input {
+      padding: 10px;
+      border: 1px solid white;
+      background: black;
+      color: white;
+      font-family: inherit;
+      width: 200px;
+    }
+
+    .email-form button {
+      padding: 10px 20px;
+      border: 1px solid white;
+      background: black;
+      color: white;
+      cursor: pointer;
+      font-family: inherit;
+    }
+
+    .email-form button:hover {
+      background: white;
+      color: black;
+    }
+
+    footer {
+      position: absolute;
+      bottom: 10px;
+      right: 20px;
+      font-size: 12px;
+      color: grey;
+    }
+  </style>
+</head>
+<body>
+  <div class="logo">
+    <img src="your-logo.png" alt="ZYPHER Logo" width="120">
+  </div>
+
+  <div class="time" id="time"></div>
+
+  <div class="coming-soon">COMING SOON...</div>
+  <img src="your-shirt.png" alt="ZYPHER Shirt" class="product">
+
+  <form class="email-form" action="https://formspree.io/f/yourFormID" method="POST">
+    <input type="email" name="email" placeholder="Your Email" required>
+    <button type="submit">SUBMIT</button>
+  </form>
+
+  <footer>ZYPHER © 2025</footer>
+
+  <script>
+    function updateTime() {
+      const now = new Date();
+      const options = { weekday: 'long', hour: '2-digit', minute: '2-digit' };
+      document.getElementById('time').textContent = now.toLocaleString('en-US', options);
+    }
+    setInterval(updateTime, 1000);
+    updateTime();
+  </script>
+</body>
+</html>
