@@ -1,82 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Zypher</title>
-  <style>
-    body {
-      margin: 0;
-      height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      align-items: center;
-      background-color: black;
-      color: white;
-      font-family: Arial, sans-serif;
-      overflow: hidden;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zypher - Coming Soon</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #000000;
+            color: #FFFFFF;
+        }
 
-    /* Logo */
-    .logo {
-      margin-top: 20px;
-    }
+        @keyframes blink {
+            0% { opacity: 1; }
+            50% { opacity: 0; }
+            100% { opacity: 1; }
+        }
 
-    /* Center GIF */
-    .gif-container {
-      flex: 1;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-    .gif-container img {
-      max-width: 80%;
-      max-height: 70%;
-    }
-
-    /* Email Form Bottom Left */
-    .email-container {
-      position: absolute;
-      bottom: 20px;
-      left: 20px;
-    }
-    input[type="email"] {
-      padding: 8px;
-      border-radius: 4px;
-      border: none;
-      margin-right: 5px;
-    }
-    button {
-      padding: 8px 12px;
-      border: none;
-      border-radius: 4px;
-      background-color: white;
-      color: black;
-      cursor: pointer;
-      font-weight: bold;
-    }
-  </style>
+        .blinking {
+            animation: blink 1.5s infinite;
+        }
+    </style>
 </head>
-<body>
+<body class="flex flex-col items-center justify-center min-h-screen p-4">
+    <div class="absolute top-10 flex flex-col items-center">
+        <img src="logo.png" alt="Zypher Logo" class="w-[334px] h-[334px]">
+    </div>
 
-  <!-- Logo -->
-  <div class="logo">
-    <img src="logo.png.png" alt="Logo" width="120">
-  </div>
+    <div class="flex flex-col items-center justify-center mt-20 md:mt-0">
+        <div class="w-[540px] h-[540px] bg-white rounded-lg overflow-hidden flex items-center justify-center">
+            <img src="tshirt.gif" alt="Coming Soon GIF" class="w-full h-full object-cover">
+        </div>
+        <p id="coming-soon-text" class="text-xl mt-8 blinking">COMING SOON...</p>
+    </div>
 
-  <!-- GIF -->
-  <div class="gif-container">
-    <img src="tshirt.gif" alt="Tshirt Animation">
-  </div>
-
-  <!-- Email Signup -->
-  <div class="email-container">
-    <form>
-      <input type="email" placeholder="Enter your email" required>
-      <button type="submit">Submit</button>
-    </form>
-  </div>
-
+    <div class="absolute bottom-10">
+        <p class="text-[20px] font-bold">ZYPHER© 2025</p>
+    </div>
 </body>
 </html>
