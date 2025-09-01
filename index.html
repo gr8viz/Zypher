@@ -3,38 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zypher - Coming Soon</title>
+    <title>Zypher Coming Soon</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #000000;
-            color: #FFFFFF;
-        }
-
-        @keyframes blink {
-            0% { opacity: 1; }
-            50% { opacity: 0; }
-            100% { opacity: 1; }
-        }
-
-        .blinking {
+        .blink {
             animation: blink 1.5s infinite;
+        }
+        @keyframes blink {
+            50% { opacity: 0; }
+        }
+        .rotate {
+            animation: rotate 4s linear infinite;
+        }
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
         }
     </style>
 </head>
-<body class="flex flex-col items-center justify-center min-h-screen">
-    <div class="flex flex-col items-center py-4">
-        <img src="logo.png.png" alt="Zypher Logo" class="w-[334px]">
-        <div class="w-[540px] h-[540px] bg-white rounded-lg overflow-hidden flex items-center justify-center mt-4">
-            <img src="tshirt.gif" alt="Coming Soon GIF" class="w-full h-full object-cover">
-        </div>
-        <p id="coming-soon-text" class="text-base mt-4 blinking">COMING SOON...</p>
-    </div>
+<body class="bg-black flex flex-col items-center justify-between min-h-screen">
+    <!-- Header with Logo -->
+    <header class="py-8">
+        <img src="logo.png.png" alt="Zypher Logo" class="w-[322px] h-[129px] sm:w-[197px] sm:h-[79px]">
+    </header>
 
-    <div class="mt-auto mb-8">
-        <p class="text-[20px] font-bold">ZYPHER© 2025</p>
-    </div>
+    <!-- Main Content with Rotating T-shirt GIF -->
+    <main class="flex-grow flex items-center justify-center">
+        <div class="w-[540px] h-[540px] sm:w-[309px] sm:h-[309px] overflow-hidden">
+            <img src="tshirt.gif" alt="T-shirt GIF" class="w-full h-full object-cover rotate">
+        </div>
+    </main>
+
+    <!-- Footer with Blinking Text -->
+    <footer class="py-8 text-white text-center">
+        <p class="text-16px blink">COMING SOON...</p>
+        <p class="text-20px mt-4">ZYPHER© 2025</p>
+    </footer>
 </body>
 </html>
