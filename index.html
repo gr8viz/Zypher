@@ -12,13 +12,6 @@
         @keyframes blink {
             50% { opacity: 0; }
         }
-        .rotate {
-            animation: rotate 4s linear infinite;
-        }
-        @keyframes rotate {
-            from { transform: rotate(0deg); }
-            to { transform: rotate(360deg); }
-        }
     </style>
 </head>
 <body class="bg-black flex flex-col items-center justify-between min-h-screen">
@@ -27,17 +20,17 @@
         <img src="logo.png.png" alt="Zypher Logo" class="w-[322px] h-[129px] sm:w-[197px] sm:h-[79px]">
     </header>
 
-    <!-- Main Content with Rotating T-shirt GIF -->
+    <!-- Main Content with T-shirt GIF -->
     <main class="flex-grow flex items-center justify-center">
         <div class="w-[540px] h-[540px] sm:w-[309px] sm:h-[309px] overflow-hidden">
-            <img src="tshirt.gif" alt="T-shirt GIF" class="w-full h-full object-cover rotate">
+            <img src="tshirt.gif" alt="T-shirt GIF" class="w-full h-full object-cover">
         </div>
     </main>
 
     <!-- Footer with Blinking Text -->
     <footer class="py-8 text-white text-center">
-        <p class="text-16px blink">COMING SOON...</p>
-        <p class="text-20px mt-4">ZYPHER© 2025</p>
+        <p class="text-14px blink">COMING SOON...</p>
+        <p class="text-20px mt-4 font-bold">ZYPHER© 2025</p>
     </footer>
 </body>
 </html>
